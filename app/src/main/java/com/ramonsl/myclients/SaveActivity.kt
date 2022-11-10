@@ -11,14 +11,15 @@ class SaveActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
+        setContentView(R.layout.activity_save)
+
         val FABBack = findViewById<FloatingActionButton>(R.id.FABBack)
         val FABSave = findViewById<FloatingActionButton>(R.id.FABSave)
         val edtNome= findViewById<EditText>(R.id.edtNome)
         val edtFone= findViewById<EditText>(R.id.edtFone)
         val edtIdade= findViewById<EditText>(R.id.edtIdade)
-
-        setContentView(R.layout.activity_save)
-
 
         FABBack.setOnClickListener(View.OnClickListener {
             onBackPressed()

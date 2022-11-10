@@ -15,19 +15,21 @@ class MainActivity : AppCompatActivity() {
 
     private var clientesList = mutableListOf<Cliente>()
     override fun onCreate(savedInstanceState: Bundle?) {
-        var FabAdd = findViewById<FloatingActionButton>(R.id.FabAdd)
-        var FABfiltro = findViewById<FloatingActionButton>(R.id.FABfiltro)
-        var edtSearch = findViewById<EditText>(R.id.edtSearch)
+
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         updateAdapter()
         initRecyclerView()
+        var FabAdd = findViewById<FloatingActionButton>(R.id.FabAdd)
+        var FABfiltro = findViewById<FloatingActionButton>(R.id.FABfiltro)
+        var edtSearch = findViewById<EditText>(R.id.edtSearch)
 
-        FabAdd.setOnClickListener(View.OnClickListener {
+        FabAdd.setOnClickListener{
             val it = Intent(this, SaveActivity::class.java)
             startActivity(it)
-        })
+        }
+
 
         FABfiltro.setOnClickListener {
             findAdapter(edtSearch.text.toString())
